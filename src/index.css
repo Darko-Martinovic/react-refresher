@@ -1,0 +1,157 @@
+/* ---------------------------------------------------------------
+ * Global CSS variables — light + dark
+ * Mirrors the Angular sibling app for visual continuity.
+ * --------------------------------------------------------------- */
+
+:root,
+html[data-mui-color-scheme='light'] {
+  color-scheme: light;
+  --surface-0: #fafafb;
+  --surface-1: #ffffff;
+  --surface-2: #f3f4f6;
+  --surface-3: #e8ebef;
+  --surface-border: rgba(15, 23, 42, 0.08);
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --tertiary: #7c3aed;
+  --success: #16a34a;
+  --warn: #d97706;
+  --danger: #dc2626;
+
+  --shadow: rgba(15, 23, 42, 0.18);
+}
+
+html[data-mui-color-scheme='dark'] {
+  color-scheme: dark;
+  --surface-0: #0a0b10;
+  --surface-1: #12141c;
+  --surface-2: #1a1d27;
+  --surface-3: #232735;
+  --surface-border: rgba(255, 255, 255, 0.08);
+
+  --text-primary: #f5f7fa;
+  --text-secondary: #c7cdd9;
+  --text-muted: #8a92a3;
+
+  --accent: #60a5fa;
+  --accent-strong: #93c5fd;
+  --tertiary: #c4b5fd;
+  --success: #4ade80;
+  --warn: #fbbf24;
+  --danger: #f87171;
+
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, sans-serif;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--surface-0);
+  color: var(--text-primary);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+a {
+  color: var(--accent-strong);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-border);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--text-muted) 30%, transparent);
+}
+
+/* ---------------------------------------------------------------
+ * highlight.js — minimal, two-theme
+ * --------------------------------------------------------------- */
+.hljs {
+  color: var(--text-primary);
+  background: transparent;
+}
+
+html[data-mui-color-scheme='light'] .hljs-comment,
+html[data-mui-color-scheme='light'] .hljs-quote { color: #64748b; font-style: italic; }
+html[data-mui-color-scheme='light'] .hljs-keyword,
+html[data-mui-color-scheme='light'] .hljs-selector-tag,
+html[data-mui-color-scheme='light'] .hljs-built_in,
+html[data-mui-color-scheme='light'] .hljs-type { color: #c026d3; }
+html[data-mui-color-scheme='light'] .hljs-literal,
+html[data-mui-color-scheme='light'] .hljs-number { color: #0891b2; }
+html[data-mui-color-scheme='light'] .hljs-string,
+html[data-mui-color-scheme='light'] .hljs-doctag,
+html[data-mui-color-scheme='light'] .hljs-regexp { color: #16a34a; }
+html[data-mui-color-scheme='light'] .hljs-title,
+html[data-mui-color-scheme='light'] .hljs-section,
+html[data-mui-color-scheme='light'] .hljs-name,
+html[data-mui-color-scheme='light'] .hljs-class .hljs-title { color: #2563eb; }
+html[data-mui-color-scheme='light'] .hljs-attr,
+html[data-mui-color-scheme='light'] .hljs-attribute,
+html[data-mui-color-scheme='light'] .hljs-variable,
+html[data-mui-color-scheme='light'] .hljs-template-variable,
+html[data-mui-color-scheme='light'] .hljs-property { color: #7c3aed; }
+html[data-mui-color-scheme='light'] .hljs-tag { color: #475569; }
+html[data-mui-color-scheme='light'] .hljs-tag .hljs-name { color: #2563eb; }
+html[data-mui-color-scheme='light'] .hljs-meta { color: #c026d3; }
+html[data-mui-color-scheme='light'] .hljs-deletion { color: #dc2626; }
+html[data-mui-color-scheme='light'] .hljs-addition { color: #16a34a; }
+
+html[data-mui-color-scheme='dark'] .hljs-comment,
+html[data-mui-color-scheme='dark'] .hljs-quote { color: #8a92a3; font-style: italic; }
+html[data-mui-color-scheme='dark'] .hljs-keyword,
+html[data-mui-color-scheme='dark'] .hljs-selector-tag,
+html[data-mui-color-scheme='dark'] .hljs-built_in,
+html[data-mui-color-scheme='dark'] .hljs-type { color: #f0abfc; }
+html[data-mui-color-scheme='dark'] .hljs-literal,
+html[data-mui-color-scheme='dark'] .hljs-number { color: #67e8f9; }
+html[data-mui-color-scheme='dark'] .hljs-string,
+html[data-mui-color-scheme='dark'] .hljs-doctag,
+html[data-mui-color-scheme='dark'] .hljs-regexp { color: #86efac; }
+html[data-mui-color-scheme='dark'] .hljs-title,
+html[data-mui-color-scheme='dark'] .hljs-section,
+html[data-mui-color-scheme='dark'] .hljs-name,
+html[data-mui-color-scheme='dark'] .hljs-class .hljs-title { color: #93c5fd; }
+html[data-mui-color-scheme='dark'] .hljs-attr,
+html[data-mui-color-scheme='dark'] .hljs-attribute,
+html[data-mui-color-scheme='dark'] .hljs-variable,
+html[data-mui-color-scheme='dark'] .hljs-template-variable,
+html[data-mui-color-scheme='dark'] .hljs-property { color: #c4b5fd; }
+html[data-mui-color-scheme='dark'] .hljs-tag { color: #cbd5e1; }
+html[data-mui-color-scheme='dark'] .hljs-tag .hljs-name { color: #93c5fd; }
+html[data-mui-color-scheme='dark'] .hljs-meta { color: #f0abfc; }
+html[data-mui-color-scheme='dark'] .hljs-deletion { color: #fca5a5; }
+html[data-mui-color-scheme='dark'] .hljs-addition { color: #86efac; }
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
